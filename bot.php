@@ -17,11 +17,7 @@ $profile    = $client->profil($userId);
 $repro = json_encode($profile);
 $messageid  = $client->parseEvents()[0]['message']['id'];
 $msg_type      = $client->parseEvents()[0]['message']['type'];
-
 $post_data      = $client->parseEvents()[0]['postback']['data'];
-
-
-
 $msg_file      = $client->parseEvents()[0]['message']['fileName'];
 $msg_message   = $client->parseEvents()[0]['message']['text'];
 $msg_title     = $client->parseEvents()[0]['message']['title'];
