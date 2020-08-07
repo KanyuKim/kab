@@ -391,7 +391,6 @@ elseif ($post_data== 'happy') {
     );
 }
 
-
 else {
                     $url = "https://dialogflow.cloud.google.com/v1/integrations/line/webhook/890c5fbc-a35c-469b-a8d8-b72a9f5ae735";
                     $headers = getallheaders();
