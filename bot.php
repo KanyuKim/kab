@@ -392,28 +392,26 @@ elseif ($post_data== 'happy') {
 }
 
 else {
-                    $url = "https://dialogflow.cloud.google.com/v1/integrations/line/webhook/890c5fbc-a35c-469b-a8d8-b72a9f5ae735";
-                    $headers = getallheaders();
-                    file_put_contents('headers.txt',json_encode($headers, JSON_PRETTY_PRINT));          
-                    file_put_contents('body.txt',file_get_contents('php://input'));
-                    $headers['Host'] = "dialogflow.cloud.google.com";
-                    $json_headers = array();
-                    foreach($headers as $k=>$v){
-                        $json_headers[]=$k.":".$v;
-                    }
-                    $inputJSON = file_get_contents('php://input');
-                    $ch = curl_init();
-                    curl_setopt( $ch, CURLOPT_URL, $url);
-                    curl_setopt( $ch, CURLOPT_POST, 1);
-                    curl_setopt( $ch, CURLOPT_BINARYTRANSFER, true);
-                    curl_setopt( $ch, CURLOPT_POSTFIELDS, $inputJSON);
-                    curl_setopt( $ch, CURLOPT_HTTPHEADER, $json_headers);
-                    curl_setopt( $ch, CURLOPT_SSL_VERIFYHOST, 2);
-                    curl_setopt( $ch, CURLOPT_SSL_VERIFYPEER, 1); 
-                    curl_setopt( $ch, CURLOPT_FOLLOWLOCATION, 1);
-                    curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1);
-                    $result = curl_exec( $ch );
-                    curl_close( $ch );
+         
+   // -----------------------------------------------------------
+            $text = "บันทึกไฟล์รูปภาพเรียบร้อยแล้ว";
+      $mreply = array(
+        'replyToken' => $replyToken,
+        'messages' => array(
+            array(
+                'type' => 'text',
+                'text' => $text
+            ),
+            array(
+                'type' => 'text',
+                'text' => $picurl
+            )
+        )
+    );
+    
+//----------------------------------------------------------------------------------
+    
+    
 }
 }
 if (isset($mreply)) {
