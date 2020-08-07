@@ -3,8 +3,8 @@
 require_once('./include/line_class.php');
 require_once('./unirest-php-master/src/Unirest.php');
 #-------------------------[Token]-------------------------#
-$channelAccessToken = 'oB+dxq4x/QW0LK5ChAdkW8lA/NB45OZBqL9esFEklV4HE+s0s/uYj87W/pFC8TVux4iE28au22uaTj7by26TAeG+yYwl4bgAvV4xam3djBZRhaC2iYxroQNVYYqyfv84hAsnHS8/Di9m6w7OP8LElQdB04t89/1O/w1cDnyilFU='; 
-$channelSecret = '53166c3cef8967db426b9328f1066bac';
+$channelAccessToken = 'OT1Mr8FCNG/GDY8oxIVa7H++ZmXL5hwltJy9BA/P8bfY46vn/Cu8gnRCT2qwafiYwQA672DCMBmEJEtLyGBWdCBILQmXKKSCx32Mo6yey93gvkZBCKWDYj2X0YnjVNepLslfspYsbKbvTU/g3+NXUgdB04t89/1O/w1cDnyilFU='; 
+$channelSecret = '0c384592a626e8ff8076b0dbd34aa5b9';
 #-------------------------[Events]-------------------------#
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 $userId     = $client->parseEvents()[0]['source']['userId'];
