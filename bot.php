@@ -397,7 +397,20 @@ elseif ($post_data== 'happy') {
 
 
 else {
-                
+                 $mreply = array(
+        'replyToken' => $replyToken,
+        'messages' => array(
+            array(
+                'type' => 'text',
+                'text' => $msg_message
+            ),
+            array(
+                'type' => 'text',
+                'text' => "อะไร"
+            )
+        )
+    );
+    
                         $url = "https://dialogflow.cloud.google.com/v1/integrations/line/webhook/890c5fbc-a35c-469b-a8d8-b72a9f5ae735";
                         $headers = getallheaders();
                         file_put_contents('headers.txt',json_encode($headers, JSON_PRETTY_PRINT));          
@@ -420,7 +433,7 @@ else {
                         curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1);
                         $result = curl_exec( $ch );
                         curl_close( $ch );
-            
+           
 }
 if (isset($mreply)) {
     $result = json_encode($mreply);
