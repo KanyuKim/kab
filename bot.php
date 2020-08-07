@@ -70,7 +70,6 @@ if ($response->isSucceeded()) {
     echo 'Succeeded!';
     return;
 }
- 
 // Failed
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
 ?>
