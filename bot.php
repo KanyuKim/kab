@@ -394,7 +394,8 @@ elseif ($post_data== 'happy') {
 else {
          
    // -----------------------------------------------------------
-      $text = "บันทึกไฟล์รูปภาพเรียบร้อยแล้ว";
+     
+       $text = $msg_message;
       $mreply = array(
         'replyToken' => $replyToken,
         'messages' => array(
