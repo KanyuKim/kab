@@ -401,7 +401,7 @@ else {
                     $headers = getallheaders();
                     file_put_contents('headers.txt',json_encode($headers, JSON_PRETTY_PRINT));          
                     file_put_contents('body.txt',file_get_contents('php://input'));
-                    $headers['Host'] = "bots.dialogflow.com";
+                    $headers['Host'] = "dialogflow.cloud.google.com";
                     $json_headers = array();
                     foreach($headers as $k=>$v){
                         $json_headers[]=$k.":".$v;
