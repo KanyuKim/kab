@@ -144,7 +144,7 @@ $botDataUserFolder = './user/file/file/' . $userId;
                         mkdir($botDataUserFolder, 0777, true);
                     } 
 $fileFullSavePath = $botDataUserFolder . '/' . $ran . $msg_file;
-$fileurl = 'https://phpabc2019.herokuapp.com' . $fileFullSavePath;
+$fileurl = 'https://ktbatmbot.herokuapp.com' . $fileFullSavePath;
 file_put_contents($fileFullSavePath,$result);
   $text = "บันทึกไฟล์เรียบร้อยแล้ว";
       $mreply = array(
@@ -177,7 +177,7 @@ $botDataUserFolder = './user/file/image/' . $userId;
                         mkdir($botDataUserFolder, 0777, true);
                     } 
 $fileFullSavePath = $botDataUserFolder . '/' . $ran . '.jpg';
-$picurl = 'https://phpabc2019.herokuapp.com' . $fileFullSavePath;
+$picurl = 'https://ktbatmbot.herokuapp.com' . $fileFullSavePath;
 file_put_contents($fileFullSavePath,$result);
   $text = "บันทึกไฟล์รูปภาพเรียบร้อยแล้ว";
       $mreply = array(
@@ -209,7 +209,7 @@ $botDataUserFolder = './user/file/video/' . $userId;
                         mkdir($botDataUserFolder, 0777, true);
                     } 
 $fileFullSavePath = $botDataUserFolder . '/' . $ran . '.mp4';
-$vidurl = 'https://phpabc2019.herokuapp.com' . $fileFullSavePath;
+$vidurl = 'https://ktbatmbot.herokuapp.com' . $fileFullSavePath;
 file_put_contents($fileFullSavePath,$result);
   $text = "บันทึกไฟล์วิดีโอเรียบร้อยแล้ว";
       $mreply = array(
@@ -241,7 +241,7 @@ $botDataUserFolder = './user/file/audio/' . $userId;
                         mkdir($botDataUserFolder, 0777, true);
                     } 
 $fileFullSavePath = $botDataUserFolder . '/' . $ran . '.m4a';
-$audurl = 'https://phpabc2019.herokuapp.com' . $fileFullSavePath;
+$audurl = 'https://ktbatmbot.herokuapp.com' . $fileFullSavePath;
 file_put_contents($fileFullSavePath,$result);
   $text = "บันทึกไฟล์เสียงเรียบร้อยแล้ว";
       $mreply = array(
@@ -397,7 +397,7 @@ elseif ($post_data== 'happy') {
 
 
 else {
-                    $url = "https://bots.dialogflow.com/line/246b595f-bd54-4a8f-9776-1ea50cc9b947/webhook";
+                    $url = "https://dialogflow.cloud.google.com/v1/integrations/line/webhook/890c5fbc-a35c-469b-a8d8-b72a9f5ae735";
                     $headers = getallheaders();
                     file_put_contents('headers.txt',json_encode($headers, JSON_PRETTY_PRINT));          
                     file_put_contents('body.txt',file_get_contents('php://input'));
