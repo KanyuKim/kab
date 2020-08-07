@@ -9,7 +9,7 @@ $CHANNEL_SECRET = '0c384592a626e8ff8076b0dbd34aa5b9';
 $POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' . $ACCESS_TOKEN);
 
 $request = file_get_contents('php://input');   // Get request content
-$request_array = json_decode($request, true);   // Decode JSON to Array
+$request_array = json_decode($request, true);   // Decode JSON to Arra
 
 
 
