@@ -402,10 +402,6 @@ else {
             array(
                 'type' => 'text',
                 'text' => $text
-            ),
-            array(
-                'type' => 'text',
-                'text' => $text
             )
         )
     );
